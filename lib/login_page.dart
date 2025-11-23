@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -14,11 +15,13 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: 390,
       height: 844,
+      decoration: BoxDecoration(color: Colors.white),
       child: Stack(
         children: [
+          // “WHO ARE”
           Positioned(
             left: 131,
             top: 344,
@@ -27,24 +30,40 @@ class Login extends StatelessWidget {
               child: Text(
                 'WHO ARE',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontFamily: 'Inter',
+                ),
               ),
             ),
           ),
 
+          // “YOU”
           Positioned(
             left: 168,
             top: 367,
-            child: Text('YOU', style: TextStyle(fontSize: 28)),
+            child: Text(
+              'YOU',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 28,
+                fontFamily: 'Roboto',
+              ),
+            ),
           ),
 
-          // BACK button → go back
+          // OK BUTTON
           Positioned(
             left: 138,
             top: 403,
             child: GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const HomePage()),
+                );
               },
               child: Container(
                 width: 120,
@@ -55,8 +74,12 @@ class Login extends StatelessWidget {
                 ),
                 alignment: Alignment.center,
                 child: Text(
-                  "BACK",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  "OK",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'Inter',
+                  ),
                 ),
               ),
             ),

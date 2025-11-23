@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'start_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,16 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const StartScreen(),
+
+      // Start screen first
+      home: const StartPage(),
     );
-  }
-}
-
-class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Start()));
   }
 }

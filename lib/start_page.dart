@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
 
-class Start extends StatelessWidget {
-  const Start({super.key});
+class StartPage extends StatelessWidget {
+  const StartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Scaffold(body: Center(child: Start()));
+  }
+}
+
+class Start extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       width: 390,
       height: 844,
+      color: Colors.white,
       child: Stack(
         children: [
           Positioned(
@@ -23,14 +31,16 @@ class Start extends StatelessWidget {
               ),
             ),
           ),
+
           Positioned(
             left: 136,
             top: 367,
             child: Text(
-              'THE UNIPOOL',
+              'UNIPOOL',
               style: TextStyle(color: Colors.black, fontSize: 28),
             ),
           ),
+
           Positioned(
             left: 138,
             top: 403,
