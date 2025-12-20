@@ -7,7 +7,7 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'bottom_nav.dart'; // Import your navigation bar
-import 'St.dart';
+import 'secrets.dart';
 
 class OrdersPage extends StatefulWidget {
   const OrdersPage({super.key});
@@ -18,7 +18,7 @@ class OrdersPage extends StatefulWidget {
 
 class _OrdersPageState extends State<OrdersPage> {
   // --- CONFIGURATION ---
-  final String googleApiKey = googleApiKey;
+  final String googleApiKey = kGoogleApiKey;
   final Completer<GoogleMapController> _mapController = Completer();
 
   final TextEditingController _pickupController = TextEditingController(
