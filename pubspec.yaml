@@ -47,6 +47,8 @@ dependencies:
   month_year_picker: ^0.5.0+1
   country_code_picker: ^3.0.0
   file_picker: ^8.0.7
+  flutter_image_compress: ^2.3.0
+  http: ^1.2.0
 
   # Google Maps (Replacement for flutter_map)
   google_maps_flutter: ^2.5.3
@@ -78,13 +80,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/drivers/danish.jpg
-    - assets/drivers/bohan.jpg
-    - assets/drivers/kurt.jpg
-    - assets/drivers/samantha.jpg
-    - assets/drivers/wayne.jpg
-    - assets/drivers/sarah.jpg
-    - assets/drivers/rue.jpg
+    - assets/
+    - assets/drivers/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
