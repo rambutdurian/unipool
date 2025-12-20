@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:async';
+
+import 'admin_login_page.dart';
 import 'login_page.dart';
 
 class StartPage extends StatelessWidget {
@@ -6,69 +10,45 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Start()));
+    if (kIsWeb) {
+      return const AdminLoginPage(); 
+    }
+    return const SplashScreen(); 
   }
 }
 
-class Start extends StatelessWidget {
-  const Start({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 5), () {
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 390,
-      height: 844,
-      color: Colors.white,
-      child: Stack(
-        children: [
-          Positioned(
-            left: 131,
-            top: 344,
-            child: SizedBox(
-              width: 108,
-              child: Text(
-                'WELCOME TO',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.black, fontSize: 16),
-              ),
-            ),
-          ),
-
-          Positioned(
-            left: 136,
-            top: 367,
-            child: Text(
-              'UNIPOOL',
-              style: TextStyle(color: Colors.black, fontSize: 28),
-            ),
-          ),
-
-          Positioned(
-            left: 138,
-            top: 403,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const LoginPage()),
-                );
-              },
-              child: Container(
-                width: 120,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Color(0xFF2C2C2C),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  "START",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-              ),
-            ),
-          ),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/UniPool.png', width: 220),
+            const SizedBox(height: 30),
+          ],
+        ),
       ),
     );
   }
