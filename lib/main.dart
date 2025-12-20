@@ -24,24 +24,22 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // FAIL-SAFE INITIALIZATION
+
   try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-    debugPrint("Firebase initialized successfully.");
-  } catch (e) {
-    // If it says duplicate app, we just ignore it and move on
-    if (e.toString().contains('duplicate-app')) {
-      debugPrint("Firebase already initialized, skipping...");
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
     } else {
-      debugPrint("Firebase initialization error: $e");
+      Firebase.app(); 
     }
+  } catch (e) {
+    debugPrint("Firebase Main Init error: $e");
   }
 
-  // Messaging setup
-  if (!kIsWeb) {
+  if (kIsWeb) {
+    debugPrint("Running on Web: Messaging service skipped.");
+  } else {
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await FirebaseMessagingService().initializeFirebaseMessaging();
   }
