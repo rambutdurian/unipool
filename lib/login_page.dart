@@ -443,7 +443,7 @@ class _LoginState extends State<Login> {
                             onTap: _isLoading ? null : () {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgotPasswordPage()),);
                               log('Forgot Password clicked, navigating to reset page');
-                            }
+                            },
                             child: Text(
                               "Forgot Password?",
                               style: TextStyle(
