@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "327555304518",
+    "project_id": "unipool-2edea",
+    "storage_bucket": "unipool-2edea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327555304518:android:d1c047a2c2ff482d200e47",
+        "android_client_info": {
+          "package_name": "com.example.my_first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAojaVtZ88NqKd4G81Qm8i25BIS4J_2JE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
