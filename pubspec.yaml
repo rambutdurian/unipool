@@ -48,7 +48,6 @@ dependencies:
   country_code_picker: ^3.0.0
   file_picker: ^8.0.7
   flutter_image_compress: ^2.3.0
-  http: ^1.2.0
 
   # Google Maps (Replacement for flutter_map)
   google_maps_flutter: ^2.5.3
