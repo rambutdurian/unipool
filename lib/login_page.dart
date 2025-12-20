@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'home_page.dart';
 import 'create_account_page.dart';
+import 'forgot_password_page.dart';
 
 enum UserRole { passenger, driver }
 
@@ -70,19 +71,16 @@ class _LoginState extends State<Login> {
         : 'driver';
 
     try {
-      // --- 1. Basic Validation (Empty Fields) ---
       if (email.isEmpty || password.isEmpty) {
         throw const AuthException('Please enter both your email and password.');
       }
 
-      // --- 2. Email Domain Check  ---
       if (!email.toLowerCase().endsWith(_requiredDomain)) {
         throw AuthException(
           'Login requires a valid student email ending with $_requiredDomain.',
         );
       }
 
-      // --- 3. Firebase Authentication (Sign In) ---
       final userCredential = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
@@ -93,7 +91,6 @@ class _LoginState extends State<Login> {
         throw const AuthException('Authentication failed. Please try again.');
       }
 
-      // --- 4. Email Verification Check ---
       await user.reload();
       if (!user.emailVerified) {
         await user.sendEmailVerification();
@@ -102,7 +99,6 @@ class _LoginState extends State<Login> {
         );
       }
 
-      // --- 5. Firestore Document Fetch & Verification Sync ---
       final userDocRef = _db.collection('users').doc(user.uid);
       DocumentSnapshot docSnapshot = await userDocRef.get();
 
@@ -444,9 +440,10 @@ class _LoginState extends State<Login> {
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 34, right: 32),
                           child: InkWell(
-                            onTap: _isLoading
-                                ? null
-                                : () => log('Forgot Password clicked'),
+                            onTap: _isLoading ? null : () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgotPasswordPage()),);
+                              log('Forgot Password clicked, navigating to reset page');
+                            }
                             child: Text(
                               "Forgot Password?",
                               style: TextStyle(
