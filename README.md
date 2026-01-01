@@ -1,72 +1,44 @@
-# UNIPOOL (Flutter Project)
+# UniPool 🚖
+**Your Student Ride-Sharing Companion at USM!** 🎓🛵
 
-UNIPOOL is a Flutter mobile application.
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
+[![GitHub issues](https://img.shields.io/github/issues/rambutdurian/unipool?style=for-the-badge)](https://github.com/rambutdurian/unipool/issues)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
----
-
-## 📌 Requirements (Must Install First)
-
-### 1. Flutter SDK  
-Download & install Flutter:  
-https://docs.flutter.dev/get-started/install
-
-### 2. Android Studio  
-Download & install Android Studio:  
-https://developer.android.com/studio
-
-Inside Android Studio, make sure these are installed:
-- Android SDK  
-- Android SDK Platform  
-- Android SDK Build-Tools  
-- Android Emulator  
-- Device Manager  
-
-### 3. VS Code Extensions (Required)
-Install these in VS Code:
-- **Flutter** (by Dart-Code)  
-- **Dart** (by Dart-Code)  
-- **Error Lens** *(optional but helpful)*  
-- **Material Icon Theme** *(optional)*
+UniPool is a **ride-sharing mobile app exclusively for USM students**. It makes commuting **cheaper, safer, and smarter** by connecting students who need rides with fellow students offering rides — all through an intuitive, easy-to-use Flutter app.
 
 ---
 
-## 🔧 How to Run the Project
+## 🎯 Project Objectives
 
-### Step 1 — Clone the repository
+1. **Affordable Student Transportation**  
+   UniPool provides a cost-effective transport solution for USM students. Rides are offered at **student-friendly rates**, solving the challenge of high transport costs. 🚖
 
-### Step 2 — Open the project  
-Open the UNIPOOL folder in **VS Code**.
+2. **Smart AI-Based Ride Matching**  
+   AI-powered system connects drivers and riders based on **time, date, and location** preferences. Students can plan trips ahead, share routes efficiently, and avoid scheduling conflicts. 🤖
 
-### Step 3 — Install dependencies  
-Run:
-flutter doctor
-Install anything marked with **X**.
-
-Then:
-flutter pub get
+3. **Secure and Verified Community**  
+   Only **USM students** can register, verified via **student email**. Drivers’ credentials are validated, and **ratings & reviews** ensure safety, trust, and quality within the app. 🔒
 
 ---
 
-## Step 4 — Recommended Emulator (Android Studio)
+## 🚀 Key Features
 
-This project was tested on:
-
-- **Device:** Pixel 3  
-- **API Level:** 36  
-- **Android Version:** Android 16 (Baklava)  
-- **System Image:** Google Play  
-- **Architecture:** Intel x86_64 (Atom)
-
-✔ Fast and less laggy  
-✔ Stable with Flutter  
-✔ Good for low-end & mid-range PCs
-
-To start emulator:  
-Android Studio → Device Manager → Run Pixel 3
+| Feature | Description |
+|---------|-------------|
+| 🚖 Ride Posting & Searching | Post a ride or search for rides easily |
+| 🤖 AI Ride Matching | Smart suggestions based on schedules & location |
+| 🔒 Secure Verification | Only USM students can register |
+| ⭐ Ratings & Reviews | Trustworthy rides through post-ride feedback |
+| 🛵 Pre-Planning & Shared Routes | Plan trips in advance and share rides |
 
 ---
 
-## Step 5 — Run the App in VScode
-in terminal:
-Flutter run
+## 🧰 Tech Stack
 
+| Technology | Purpose |
+|------------|---------|
+| Flutter | Cross-platform app development |
+| Dart | Programming language for Flutter |
+| Firebase (optional) | Authentication, database, and storage |
+| GitHub | Version control |
