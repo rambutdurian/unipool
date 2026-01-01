@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/rambutdurian/unipool?style=for-the-badge)](https://github.com/rambutdurian/unipool/issues)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-UniPool is a **ride-sharing mobile app exclusively for USM students**. It makes commuting **cheaper, safer, and smarter** by connecting students who need rides with fellow students offering rides — all through an intuitive, easy-to-use Flutter app.
+UniPool is a **ride-sharing mobile app exclusively for USM students**. It makes commuting **cheaper, safer and smarter** by connecting students who need rides with fellow students offering rides — all through an intuitive, easy-to-use Flutter app.
 
 ---
 
@@ -15,10 +15,10 @@ UniPool is a **ride-sharing mobile app exclusively for USM students**. It makes 
    UniPool provides a cost-effective transport solution for USM students. Rides are offered at **student-friendly rates**, solving the challenge of high transport costs. 🚖
 
 2. **Smart AI-Based Ride Matching**  
-   AI-powered system connects drivers and riders based on **time, date, and location** preferences. Students can plan trips ahead, share routes efficiently, and avoid scheduling conflicts. 🤖
+   AI-powered system connects drivers and riders based on **time, date and location** preferences. Students can plan trips ahead, share routes efficiently and avoid scheduling conflicts. 🤖
 
 3. **Secure and Verified Community**  
-   Only **USM students** can register, verified via **student email**. Drivers’ credentials are validated, and **ratings & reviews** ensure safety, trust, and quality within the app. 🔒
+   Only **USM students** can register, verified via **student email**. Drivers’ credentials are validated and **ratings & reviews** ensure safety, trust and quality within the app. 🔒
 
 ---
 
@@ -40,5 +40,5 @@ UniPool is a **ride-sharing mobile app exclusively for USM students**. It makes 
 |------------|---------|
 | Flutter | Cross-platform app development |
 | Dart | Programming language for Flutter |
-| Firebase (optional) | Authentication, database, and storage |
+| Firebase (optional) | Authentication, database and storage |
 | GitHub | Version control |
